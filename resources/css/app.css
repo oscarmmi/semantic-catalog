@@ -1,0 +1,156 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme inline {
+    --font-sans:
+        Instrument Sans, ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+}
+
+:root {
+    color-scheme: light;
+    background: #f8f8f4;
+    font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    min-width: 360px;
+    margin: 0;
+    background:
+        radial-gradient(
+            ellipse at 81% 8%,
+            rgb(224 234 200 / 26%),
+            transparent 31rem
+        ),
+        #f8f8f4;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.search-panel {
+    border: 1px solid #e5e7de;
+    background: rgb(255 255 255 / 88%);
+    box-shadow:
+        0 22px 70px -42px rgb(30 54 39 / 34%),
+        0 2px 6px rgb(40 56 43 / 4%);
+}
+
+.query-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    border: 1px solid #e4e7de;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 66%);
+    padding: 0.48rem 0.8rem;
+    color: #647168;
+    font-size: 0.72rem;
+    transition:
+        border-color 150ms ease,
+        background 150ms ease,
+        color 150ms ease;
+}
+
+.query-chip:hover {
+    border-color: #c7d49f;
+    background: #f4f8e9;
+    color: #31483b;
+}
+
+.intro-card {
+    min-height: 180px;
+    border: 1px solid #e7e7df;
+    border-radius: 1.15rem;
+    background: rgb(255 255 255 / 60%);
+    padding: 1.15rem;
+    transition:
+        border-color 160ms ease,
+        transform 160ms ease,
+        background 160ms ease;
+}
+
+.intro-card:hover {
+    transform: translateY(-2px);
+    border-color: #cad5aa;
+    background: #fff;
+}
+
+.result-card {
+    min-width: 0;
+    border: 1px solid #e7e7df;
+    border-radius: 1.15rem;
+    background: rgb(255 255 255 / 82%);
+    padding: 1rem;
+    box-shadow: 0 8px 24px -22px rgb(31 51 41 / 28%);
+    transition:
+        transform 160ms ease,
+        box-shadow 160ms ease;
+}
+
+.result-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 35px -25px rgb(31 51 41 / 32%);
+}
+
+.category-label {
+    border-radius: 999px;
+    background: #f0f3e9;
+    padding: 0.3rem 0.55rem;
+    color: #667653;
+    font-size: 0.62rem;
+    font-weight: 600;
+}
+
+.product-mark {
+    display: flex;
+    height: 112px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.8rem;
+    border-radius: 0.9rem;
+    color: #536d4b;
+    background: linear-gradient(140deg, #eef2e8, #e2ead6);
+}
+
+.product-mark-fans {
+    color: #507367;
+    background: linear-gradient(140deg, #e8f0eb, #dbe9df);
+}
+
+.product-mark-lamps {
+    color: #997842;
+    background: linear-gradient(140deg, #f5f0e5, #eee5d1);
+}
+
+.product-mark-bags {
+    color: #6f687e;
+    background: linear-gradient(140deg, #efedf3, #e6e1ed);
+}
+
+.term-chip {
+    border: 1px solid #e4e9d7;
+    border-radius: 999px;
+    background: #f5f8ee;
+    padding: 0.18rem 0.45rem;
+    color: #708044;
+    font-size: 0.62rem;
+    line-height: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
